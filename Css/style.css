@@ -15,6 +15,8 @@ body{
 
 
 
+/* headers */
+
 .intro-head  h1{
 color: white;
 font-size: 400%;
@@ -33,18 +35,301 @@ align-items: center;
 }
 
 
-.intro-head img{
+.head-img{
     width: 100%;
     height: 25rem;
-    opacity: 0.4;
+    opacity: 0.2;
   
 
 }
 
 .intro-head h1{
-    font-size: 661%;
-    margin: -16rem 0rem 0rem 41rem;
+    font-size: 840%;
+    margin: -30rem 0rem 0rem 39rem;
     color:white;
     position:absolute;
+    /* text-shadow: 0px 0px 8px #ff5f00; */
+    /* border: 2px solid var(--main-color); 
+width: 30rem;
+height: 8rem ;
+text-align:center; */
 
 }
+
+
+.banner{
+    /* position: absolute; */
+    height: 11rem;
+    width: 23rem;
+    margin: -26rem 0rem 33rem 88.5rem;
+}
+
+.line1{
+    border-left: 3px solid var(--main-color);
+    height: 13rem;
+    margin: 0 1rem;
+    margin-top: -32rem;
+
+}
+
+.line2{
+    border-left: 3px solid var(--main-color);
+    margin: -11rem 0rem 11rem 2rem;
+    height: 10rem;
+
+
+}
+
+.line3{
+    border-left: 3px solid var(--main-color); 
+    /* margin: 20px 0; */
+    margin-top: 1rem;
+    background-color: #ff5f00;
+    width: 170px;
+    height: 2px;
+    margin: -143px 0px 57px 15px;
+
+
+}
+
+.line4{
+    border-left: 3px solid var(--main-color);
+    margin-top: 1rem;
+    background-color: #ff5f00;
+    width: 124px;
+    height: 2px;
+    margin: -72px 0px 0px 28px;
+
+
+}
+
+
+
+
+/* reels */
+
+.vid{
+  display: flex;
+  gap: 30px;
+  margin-left: 2rem;
+  margin-right: 7rem;
+}
+
+.reel {
+  position: relative;
+  width: 300px; /* Increased width */
+  height: 350px; /* Increased height */
+  border-radius: 14px;
+  z-index: 1111;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* box-shadow: 20px 20px 60px #121a4e, -20px 0px 60px #ffffff; */
+  margin: 7rem -1rem 0rem 3rem;
+}
+
+.main-reel {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 290px; /* Increased width */
+  height: 340px; /* Increased height */
+  z-index: 2;
+  background: rgba(255, 255, 255, .95);
+  backdrop-filter: blur(24px);
+  border-radius: 10px;
+  overflow: hidden;
+  outline: 2px solid white;
+}
+
+.main-reel video {
+  width: 75%;
+  height: 106%;
+  object-fit: cover;
+  border-radius: 13px;
+
+}
+
+.reel1 {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 200px; /* Increased width */
+  height: 200px; /* Increased height */
+  border-radius: 50%;
+  background-color: #ff5f00;
+  opacity: 1;
+  filter: blur(12px);
+  animation: blob-bounce 5s infinite ease;
+}
+
+@keyframes blob-bounce {
+  0% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+  }
+
+  50% {
+    transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+  }
+
+  75% {
+    transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+  }
+
+  100% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+  }
+}
+
+/* 
+.sec-card{
+    height: 35rem;
+}
+.main-card{
+    display: flex;
+    margin-left: 1rem;
+    gap: 30px;
+
+}
+.card {
+    position: relative;
+    width: 239px;
+    height: 361px;
+    background: #f00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem 0rem 0rem 2rem;
+  }
+  
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(312deg,#121a4e,#121a4e);
+  }
+  
+  .card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(312deg,#121a4e,#121a4e);
+    filter: blur(30px);
+  }
+  
+  .card b {
+    position: absolute;
+    inset: 6px;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+  }
+  
+  .card img {
+    position: absolute;
+    z-index: 3;
+    scale: 0.8;
+    opacity: 0.25;
+    transition: 0.5s;
+  }
+  
+  .card:hover img {
+    scale: 0.5;
+    opacity: 0.9;
+    transform: translateY(-70px);
+  }
+  
+  .card .content {
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: scale(0);
+    transition: 0.5s;
+  }
+  
+  .card:hover .content {
+    transform: scale(1);
+    bottom: 25px;
+  }
+  
+  .content .title {
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    line-height: 1em;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  .content .title span {
+    font-weight: 300;
+    font-size: 0.70em;
+  }
+  
+  .content .sci {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 5px;
+  }
+  
+  .sci li {
+    list-style: none;
+  }
+  
+  .sci li .fa-brands {
+    width: 4rem;
+    margin-left: -3rem;
+    color: white;
+  }
+  
+  .sci li .fa-facebook {
+    width: 10px;
+  }
+  
+  .sci li a {
+    position: relative;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0, 0, 0.2);
+    fill: currentColor;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    transition: 0.5s;
+  }
+  
+  .sci li a:hover {
+    fill: currentColor;
+    color: rgba(255, 255, 255, 1);
+  }
+  
+
+.reel{
+margin: 0rem 0rem 0rem 0rem;
+width: 10rem;
+height: 10rem
+
+} */
