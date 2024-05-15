@@ -254,3 +254,95 @@ img {
     height: 1em;
     margin-right: .25em;
 }
+
+/* app */
+.app-section {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 35px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.app-card {
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+  margin: 0 auto;
+  background: var(--bg-color);
+  border-radius: 15px;
+  box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+}
+
+.app-card .app-face1,
+.app-card .app-face2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-card .app-face1 {
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.app-card .app-face1 h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.app-card .app-face1 .app-content-heading .app-content-paragraph{
+  color: var(--text-color);
+}
+
+.app-card .app-face2 {
+  transition: 0.5s;
+}
+
+.app-card .app-image {
+  margin: 0;
+  padding: 0;
+  width: 20rem;
+  height: 20rem;
+  color: #fff;
+  transition: 0.5s;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.app-face2 img{
+  transform: scale(0.5);
+  width: 20rem;
+  height: 20rem;
+
+}
+.app-card:hover .app-face2 {
+  height: 10%;
+}
+
+.app-card:hover .app-face2 img {
+  height: 60px;
+}
+
+.app-card:nth-child(1) .app-face2,
+.app-card:nth-child(2) .app-face2,
+.app-card:nth-child(3) .app-face2,
+.app-card:nth-child(4) .app-face2{
+  background: var(--main-color);
+  border-radius: 15px;
+}
