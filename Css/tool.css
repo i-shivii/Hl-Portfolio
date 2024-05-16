@@ -108,16 +108,16 @@ margin: -71px 0px 0px 588px;
 
 .line5{
 border-left: 3px solid var(--main-color);
-height: 8rem;
-margin: 2px 72rem;
+height: 9rem;
+margin: 2px 69.7rem;
 margin-top: -8rem;
 
 }    
 
 .line6{
 border-left: 3px solid var(--main-color);
-margin: -7rem 0rem 11rem 71rem;
-height: 5rem;
+margin: -8rem 4rem 10rem 68.8rem;
+height: 6rem;
 
 
 }    
@@ -127,9 +127,9 @@ border-left: 3px solid var(--main-color);
 /* margin: 20px 0; */
 margin-top: 1rem;
 background-color: #ff5f00;
-width: 111px;
+width: 82px;
 height: 2px;
-margin: -231px 0px 57px 882px;
+margin: -226px 0px 57px 882px;
 
 }    
 
@@ -137,9 +137,9 @@ margin: -231px 0px 57px 882px;
 border-left: 3px solid var(--main-color);
 margin-top: 1rem;
 background-color: #ff5f00;
-width: 85px;
+width: 131px;
 height: 2px;
-margin: -71px 0px 0px 944px;
+margin: -72px 0px -8px 846px;
 
 
 }    
@@ -151,37 +151,293 @@ margin: -71px 0px 0px 944px;
 
 .web-sec{
     height:35rem;
-    width:100%;
-    margin: 0rem 0rem 0rem 0rem;
+    width:auto;
+    margin: -5rem 0rem 0rem 0rem;
     
-}            
+}  
+.main-web{
+    display:flex;
+    flex-wrap: wrap;
+    gap:0rem;
+    justify-content: space-evenly;
+}
+.web-sec p{
+    font-size: 400%;
+    color: var(--bg-color);
+    margin: 10rem 0rem -10rem 45rem;
+
+}
+
+@import url(//fonts.googleapis.com/css?family=Abril+Fatface|Droid+Serif:400,700,400italic,700italic);
+
+
+.blog-card {
+    max-width: 550px;
+    width: 35rem;
+    height: 20rem;
+    position: relative;
+    font-family: 'Droid Serif', serif;
+    color: #fff;
+ margin: 12rem 0rem 0rem 1rem;
+    overflow: hidden;
+    border-radius: 0px;
+    box-shadow: 0px 10px 20px -9px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: all 0.4s;
+    background: url(https://unsplash.it/600/800?image=1061) center no-repeat;
+    background-size: 99%;
+}
+.blog-card a{ 
+color:#fff;
+  text-decoration:none;
+  transition:all 0.2s
+}
+.blog-card .color-overlay {
+  background: rgba(18, 26, 78,0.5);
+  width: 550px;
+  height: 500px;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  transition: background 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
+}
+.blog-card .gradient-overlay {  
+  background-image: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.6) 21%);
+  width: 550px;
+  height: 500px;
+  position: absolute;
+  top: 350px;
+  left: 0;
+  z-index: 15;
+}
+.blog-card:hover{
+    box-shadow: 0px 18px 20px -9px rgba(0, 10, 30, 0.75);
+}
+.blog-card:hover .card-info {
+  opacity: 1;
+  bottom: 100px;
+}
+.blog-card:hover .color-overlay {
+  background: rgba(18, 26, 78,0.8);
+}
+.blog-card:hover .title-content{
+  margin-top:20rem;
+}
+.title-content {
+    text-align: center;
+    margin: 146px 0 0 -2px;
+    position: absolute;
+    z-index: 20;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: all 0.6s;
+}
+
+.blog-card:hover h3:after{
+ 
+  animation: changeLetter 0.3s 1 linear;
+  width:80%
+}
+
+.blog-card h3,h1 {
+  font-size: 1.9em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-family: 'Abril Fatface', serif;
+  margin-bottom: 0;
+  display:inline-block;
+}
+.blog-card h3 a{  
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);  
+  transition:all 0.2s
+}
+.blog-card h3 a:hover{
+  text-shadow: 0px 8px 20px rgba(0, 0, 0, 0.95);
+}
+h3:after {
+  content: " ";
+  display: block; 
+  width: 10%;
+  height: 2px;
+  margin: 20px auto;
+  border: 0;
+  background: var(--main-color);
+  transition:all 0.2s
+}
+
+@keyframes changeLetter {
+  0% {
+    width: 10%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+.intro {
+  width: 170px;
+  margin: 0 auto;
+  color: #ddd;
+  font-style: italic;
+  line-height: 18px;
+}
+.intro a{
+  color: #ddd
+}
+.intro a:hover{
+  text-decoration:underline
+}
+.card-info {
+   box-sizing: border-box;
+  padding: 0;
+  width: 100%;
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  margin: -25px auto;
+  padding: 0 50px;
+  font-style: 16px;
+  line-height: 24px;
+  z-index: 20;
+  opacity: 0;
+  transition: bottom 0.64s, opacity 0.63s cubic-bezier(0.33, 0.66, 0.66, 1);
+}
+
+.card-info a{
+    display: block;
+    width: 7rem;
+    margin: 2rem 0rem 0rem 19rem;
+    background: var(--main-color);
+    color: white;
+    padding: 3px 10px;
+    border-radius: 2px;
+    font-size: 0.8em;
+}
+.card-info a:hover{
+  background: var(--bg-color);
+  color:#fff;
+}
+.card-info a:hover span{
+   filter: brightness(10);
+   opacity:1
+}
+
+ @media (max-width:500px){
+
+  .card-info{
+    display:none
+  }
+  .blog-card:hover .title-content,.title-content{
+  margin-top:40px
+}
+.blog-card{
+  height:300px
+}
+.blog-card h3{
+  font-size:1.3em
+}
+.intro{
+  font-size:0.8em
+}
+} 
+
 
 
 /* app */
+.app-sec {
+  background-color: var(--bg-color);
+  width: 100%;
+  height: 40rem;
+  margin-top:3rem;
 
-.app {
-    
-    height:35rem;
-    width:100%;
-    background-color: #121a4e;
-    margin: 0rem 0rem 0rem 0rem;
+}
 
-}        
+.app-sec p {
+  font-size: 400%;
+  color: white;
+  margin: -4rem 0rem 3rem 45rem;
+  padding-top: 2rem;
+}
 
+.phone {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0rem;
+  justify-content: space-evenly;
+  margin: 0rem;
+}
+
+.phoneContainer {
+  width: 253px;
+  height: 404px;
+  background-color: var(--main-color);
+  border-radius: 20px;
+  position: relative;
+}
+
+.screen {
+  width: 249px;
+  height: 395px;
+  background: white;
+  border-radius: 20px;
+  position: absolute;
+  top: 4px;
+  bottom: 2px;
+  right: 2px;
+  left: 2px;
+  box-sizing: border-box;
+}
+
+
+.appsContainer {
+  margin-top: 10px;
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 117%;
+  overflow: hidden;
+}
+
+.carouselImage {
+  position: absolute;
+  width: 20rem;
+  height: 85.8%;
+  top: 9px;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  border-radius: 22px;
+  margin-top: 1rem;
+  
+}
+
+.carouselImage.active {
+  opacity: 1;
+}
 
 
 
 /* reels */
 .reels p{
-    font-size: 351%;
-    color: var(--bg-color);
-    margin: 3rem 0rem -3rem 47rem;
+  font-size: 400%;
+  color: white;
+  margin: 10rem 0rem -5rem 45rem;
+  padding-top: 3rem;
+
 }
 .reels{
-    height:40rem;
+    height:37rem;
     width:100%;
-    margin: 0rem 0rem 0rem 0rem;
-    /* background-color: #121a4e; */
+    margin: -5rem 0rem 0rem 0rem;
+    background-color: #121a4e;
 }    
 
 .vid{
@@ -349,16 +605,15 @@ margin: -71px 0px 0px 944px;
 /* video */
 
 .our-video{
-       height:40rem;
-    width:100%;
-    /* background-color: #121a4e; */
-    margin: 0rem 0rem 0rem 0rem;
-
+  height: 40rem;
+  width: 100%;
+  /* background-color: #121a4e; */
+  margin: 8rem 0rem -6rem -2rem;
 }
 .our-video p{
-    font-size: 351%;
-    color: var(--bg-color);
-    margin: 3rem 0rem -3rem 43rem;
+  font-size: 400%;
+  color: var(--bg-color);
+  margin: -3rem 0rem -2rem 45rem;
 }
 
 .video-main {
@@ -528,11 +783,12 @@ img {
 .graphics-section {
     overflow-x: hidden; 
     overflow-y: hidden;
+    margin: 2rem 0rem 0rem -2rem
 }      
 .graphics-section p {
     font-size: 351%;
     color: var(--bg-color);
-    margin: 3rem 0rem 2rem 43rem;
+    margin: 1rem 0rem 2rem 45rem;
   }        
   
   .graphics {
@@ -613,4 +869,162 @@ img {
     }        
     
  
+
+
+    /* clients */
+
+    .clients{
+      margin:-6rem 0rem 0rem 0rem;
+      background-color: #121a4e;
+    }
+    .clients p{
+      font-size: 400%;
+      color: white;
+      margin: -4rem 0rem -9rem 45rem;
+      padding-top:3rem;
+    }
+  .client-div {
+    
+      margin-left: 3%;
+      margin-right: 3%;
+      /* margin-bottom: 30rem; */
+      padding-top:8rem;
+  }
+  
+  ul.slides {
+      display: block;
+      position: relative;
+      height: 600px;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      list-style: none;
+  }
+  
+  .slides * {
+      user-select: none;
+      -ms-user-select: none;
+      -moz-user-select: none;
+      -khtml-user-select: none;
+      -webkit-user-select: none;
+      -webkit-touch-callout: none;
+  }
+  
+  ul.slides input {
+      display: none; 
+  }
+  
+  
+  .slide-container { 
+      display: block; 
+  }
+  
+  .slide-image {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 35rem;
+      top: 0;
+      opacity: 0;
+      transition: all .7s ease-in-out;
+      background-color: white;
+      margin-top:4rem;
+  }   
+  
+  .slide-image img {
+    height: 12rem;
+    width: 13rem;
+    margin: 3rem 0rem 0rem 45rem;
+  }
+  .slide-image h5{
+    font-size: 212%;
+    margin: 4rem 25rem 0rem 26rem;
+    text-align: center;
+
+  }
+  
+  .carousel-controls {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      font-size: 100px;
+      line-height: 600px;
+      color: var(--main-color);
+  }
+  
+  .carousel-controls label {
+      display: none;
+      position: absolute;
+      padding: 0 20px;
+      opacity: 0;
+      transition: opacity .2s;
+      cursor: pointer;
+  }
+  
+  .slide-image:hover + .carousel-controls label{
+      opacity: 0.5;
+  }
+  
+  .carousel-controls label:hover {
+      opacity: 1;
+  }
+  
+  .carousel-controls .prev-slide {
+      width: 49%;
+      text-align: left;
+      left: 0;
+  }
+  
+  .carousel-controls .next-slide {
+      width: 49%;
+      text-align: right;
+      right: 0;
+  }
+  
+  .carousel-dots {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 20px;
+      z-index: 999;
+      text-align: center;
+      margin-bottom: 3rem;
+  }
+  
+  .carousel-dots .carousel-dot {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: var(--main-color);
+      opacity: 0.5;
+      margin: 10px;
+  }
+  
+  input:checked + .slide-container .slide-image {
+      opacity: 1;
+      transform: scale(1);
+      transition: opacity 1s ease-in-out;
+  }
+  
+  input:checked + .slide-container .carousel-controls label {
+       display: block; 
+  }
+  
+  input#img-1:checked ~ .carousel-dots label#img-dot-1,
+  input#img-2:checked ~ .carousel-dots label#img-dot-2,
+  input#img-3:checked ~ .carousel-dots label#img-dot-3,
+  input#img-4:checked ~ .carousel-dots label#img-dot-4,
+  input#img-5:checked ~ .carousel-dots label#img-dot-5,
+  input#img-6:checked ~ .carousel-dots label#img-dot-6 {
+    opacity: 1;
+  }
+  
+  
+  input:checked + .slide-container .nav label { display: block; }
+ 
+  
+
 
