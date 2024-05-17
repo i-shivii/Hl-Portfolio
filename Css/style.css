@@ -48,17 +48,13 @@ align-items: center;
     margin: -30rem 0rem 0rem 39rem;
     color:white;
     position:absolute;
-    /* text-shadow: 0px 0px 8px #ff5f00; */
-    /* border: 2px solid var(--main-color); 
-width: 30rem;
-height: 8rem ;
-text-align:center; */
+
 
 }
 
 
 .banner{
-    /* position: absolute; */
+  
     height: 11rem;
     width: 23rem;
     margin: -26rem 0rem 33rem 88.5rem;
@@ -82,7 +78,7 @@ text-align:center; */
 
 .line3{
     border-left: 3px solid var(--main-color); 
-    /* margin: 20px 0; */
+  
     margin-top: 1rem;
     background-color: #ff5f00;
     width: 170px;
@@ -110,15 +106,16 @@ text-align:center; */
 
 .vid{
   display: flex;
-  gap: 30px;
-  margin-left: 2rem;
+  flex-wrap: wrap;
+
+  margin-left: 5rem;
   margin-right: 7rem;
 }
 
 .reel {
   position: relative;
-  width: 300px; /* Increased width */
-  height: 350px; /* Increased height */
+  width: 16rem;
+  height: 28rem;
   border-radius: 14px;
   z-index: 1111;
   overflow: hidden;
@@ -126,16 +123,16 @@ text-align:center; */
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* box-shadow: 20px 20px 60px #121a4e, -20px 0px 60px #ffffff; */
-  margin: 7rem -1rem 0rem 3rem;
+  
+  margin: 7rem 0rem 0rem 3rem;
 }
 
 .main-reel {
   position: absolute;
   top: 5px;
   left: 5px;
-  width: 290px; /* Increased width */
-  height: 340px; /* Increased height */
+  width: 23rem;
+  height: 28rem;
   z-index: 2;
   background: rgba(255, 255, 255, .95);
   backdrop-filter: blur(24px);
@@ -146,7 +143,7 @@ text-align:center; */
 
 .main-reel video {
   width: 75%;
-  height: 106%;
+  height: 109%;
   object-fit: cover;
   border-radius: 13px;
 
@@ -157,14 +154,15 @@ text-align:center; */
   z-index: 1;
   top: 50%;
   left: 50%;
-  width: 200px; /* Increased width */
-  height: 200px; /* Increased height */
+ width: 10rem; 
+  height: 20rem; 
   border-radius: 50%;
   background-color: #ff5f00;
   opacity: 1;
   filter: blur(12px);
   animation: blob-bounce 5s infinite ease;
 }
+
 
 @keyframes blob-bounce {
   0% {
@@ -188,148 +186,44 @@ text-align:center; */
   }
 }
 
-/* 
-.sec-card{
-    height: 35rem;
+
+
+
+
+/* Small mobile devices (landscape and portrait) */
+@media (max-width: 479px) {
+  /* Styles for small mobile devices */
+
+  }
+
+/* Medium mobile devices (landscape and portrait) */
+@media (min-width: 480px) and (max-width: 639px) {
+  /* Styles for medium mobile devices */
 }
-.main-card{
-    display: flex;
-    margin-left: 1rem;
-    gap: 30px;
 
+/* Large mobile devices (landscape and portrait) */
+@media (min-width: 640px) and (max-width: 767px) {
+  /* Styles for large mobile devices */
 }
-.card {
-    position: relative;
-    width: 239px;
-    height: 361px;
-    background: #f00;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 4rem 0rem 0rem 2rem;
-  }
-  
-  .card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(312deg,#121a4e,#121a4e);
-  }
-  
-  .card::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(312deg,#121a4e,#121a4e);
-    filter: blur(30px);
-  }
-  
-  .card b {
-    position: absolute;
-    inset: 6px;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 2;
-  }
-  
-  .card img {
-    position: absolute;
-    z-index: 3;
-    scale: 0.8;
-    opacity: 0.25;
-    transition: 0.5s;
-  }
-  
-  .card:hover img {
-    scale: 0.5;
-    opacity: 0.9;
-    transform: translateY(-70px);
-  }
-  
-  .card .content {
-    position: absolute;
-    z-index: 3;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transform: scale(0);
-    transition: 0.5s;
-  }
-  
-  .card:hover .content {
-    transform: scale(1);
-    bottom: 25px;
-  }
-  
-  .content .title {
-    position: relative;
-    color: #fff;
-    font-weight: 500;
-    line-height: 1em;
-    font-size: 1em;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    text-align: center;
-  }
-  
-  .content .title span {
-    font-weight: 300;
-    font-size: 0.70em;
-  }
-  
-  .content .sci {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    margin-top: 5px;
-  }
-  
-  .sci li {
-    list-style: none;
-  }
-  
-  .sci li .fa-brands {
-    width: 4rem;
-    margin-left: -3rem;
-    color: white;
-  }
-  
-  .sci li .fa-facebook {
-    width: 10px;
-  }
-  
-  .sci li a {
-    position: relative;
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.5);
-    background: rgba(0, 0, 0, 0.2);
-    fill: currentColor;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
-    transition: 0.5s;
-  }
-  
-  .sci li a:hover {
-    fill: currentColor;
-    color: rgba(255, 255, 255, 1);
-  }
-  
 
-.reel{
-margin: 0rem 0rem 0rem 0rem;
-width: 10rem;
-height: 10rem
+/* Small tablets (landscape and portrait) */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Styles for small tablets */
+}
 
-} */
+/* Large tablets (landscape and portrait) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Styles for large tablets */
+}
+
+/* Small laptops and desktops */
+@media (min-width: 1200px) and (max-width: 1439px) {
+  /* Styles for small laptops and desktops */
+}
+
+/* Large laptops and desktops */
+@media (min-width: 1440px) and (max-width: 1919px) {
+  /* Styles for large laptops and desktops */
+}
+
+
