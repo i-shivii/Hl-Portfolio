@@ -744,8 +744,21 @@ img {
 /* Large laptops and desktops */
 @media (min-width: 1440px) and (max-width: 1919px) {
 
-  /* App */
+.phone{
+  gap: 6rem;
+    margin: 0rem;
+    margin-left: 5%;
+}
 
+.app-sec p{
+  margin-left:43%;
+}
 
-  /* video */
+.graphics-section p{
+  margin-left: 43%;
+}
+
+.our-video p{
+  margin-left: 44%;
+}
 }
