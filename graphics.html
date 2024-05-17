@@ -57,6 +57,19 @@
                 </div>
             </div>
         </div>
+        <div class="phoneContainer">
+          <div class="screen">
+              <!-- <div class="camera"></div> -->
+              <div class="appsContainer carousel">
+                  <img src="image1.jpg" class="carouselImage" alt="Image 1">
+                  <img src="image2.jpg" class="carouselImage" alt="Image 2">
+                  <img src="image3.jpg" class="carouselImage" alt="Image 3">
+                  <img src="image4.jpg" class="carouselImage" alt="Image 4">
+              </div>
+          </div>
+      </div>
+      
+      
     </div>
 </section>
 
@@ -156,7 +169,7 @@
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               <div class="video-header">
-                  <a href="#">Project that got me 80+ LPA</a>
+                  <a href="#">Project that got me.</a>
                   <button class="video-icon-button">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                           fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -418,6 +431,25 @@
 
   </div>
 </section>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+      const carousels = document.querySelectorAll('.carousel');
+      carousels.forEach(carousel => {
+          const images = carousel.querySelectorAll('.carouselImage');
+          let currentIndex = 0;
   
+          function showNextImage() {
+              images[currentIndex].classList.remove('active');
+              currentIndex = (currentIndex + 1) % images.length;
+              images[currentIndex].classList.add('active');
+          }
+  
+          images[currentIndex].classList.add('active');
+          setInterval(showNextImage, 2000);
+      });
+  });
+  
+  
+</script>
 </body>
 </html>
